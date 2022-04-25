@@ -98,22 +98,74 @@
 //}
 
 //3.写一个关机程序
-int main()
-{
-	char input[20] = { 0 };
-	//shutdown -s -t 60   60s后关机
-	//shutdown -a   取消关机
-	system("shutdown -s -t 60");
-again:
-	printf("注意，1分钟后关机，输入：大哥，取消关机\n");
-	scanf("%s", input);
-	if (strcmp(input, "大哥") == 0)//判断
-	{
-		system("shutdown -a");
-	}
-	else
-	{
-		goto again;
-	}
-	return 0;
-}
+//int main()
+//{
+//	char input[20] = { 0 };
+//	//shutdown -s -t 60   60s后关机
+//	//shutdown -a   取消关机
+//	system("shutdown -s -t 60");
+//again:
+//	printf("注意，1分钟后关机，输入：大哥，取消关机\n");
+//	scanf("%s", input);
+//	if (strcmp(input, "大哥") == 0)//判断
+//	{
+//		system("shutdown -a");
+//	}
+//	else
+//	{
+//		goto again;
+//	}
+//	return 0;
+//}
+//
+//#include<stdio.h>
+//9.0
+//1001.0
+//(-1)^0*1.001*2^3
+//(-1)^S*  M  *2^E
+//S - 0
+//M - 1.001
+//E - 3
+
+//0.5
+//0.1
+//(-1)^0* 1.0 *2^-1
+//S - 0
+//M - 1.0
+//E - -1
+//E + 127 = 126
+
+//int main()
+//{
+//	int n = 9;
+//	//0 0000000 0 0000000 00000000 00001001
+//	//
+//	float* pFloat = (float*)&n;
+//	printf("n的值为:%d\n", n);
+//	printf("*pFloat的值为:%f\n", *pFloat);//0.00000
+//	//(-1)^0*0.0000000 00000000 00001001*2^-126
+//
+//	*pFloat = 9.0;
+//	//1001.0
+//	//1.001*2^3
+//	//(-1)^0*1.001*2^3
+//	//0 1000001 0 001000 00000000 000000000
+//	printf("n的值为:%d\n", n);//1091567616
+//	printf("*pFloat的值为:%f\n", *pFloat);//9.0
+//	return 0;
+//}
+
+//int main()
+//{
+//	float f = 5.5;
+//	//5.5
+//	//101.1
+//	//(-1)^0* 1.011*2^2
+//	//s - 0
+//	//M - 1.011
+//	//E - 2+127 - 129
+//	//0100 0000 1011 0000 0000 0000 0000 0000
+//	//0x40 b0 00 00 
+//
+//	return 0;
+//}
