@@ -201,3 +201,105 @@
 //	print2(arr, 3, 5);
 //	return 0;
 //}
+
+//int main()
+//{
+//	//字符指针
+//	char ch = 'w';
+//	char* p = &ch;
+//	const char* p2 = "abcdef";
+//	//指针数组 - 数组 - 存放指针的数组
+//	int* parr[10];
+//	char* ch[5];
+//	//数组指针
+//	//int* p3;//整形指针 - 指向整形的指针
+//	//char* p4;//字符指针 - 指向字符的
+//	int arr2[5];//数组
+//	int(*pa)[5] = &arr2;//取出数组的地址,pa就是一个数组指针
+//
+//	return 0;
+//}
+
+//void test(int arr[3][5])
+//{}
+//void test1(int arr[][5])
+//{}
+//void test2(int arr[3][])//err
+//{}
+//void test3(int* arr)//err
+//{}
+//void test4(int** arr)//err
+//{}
+//void test5(int(*arr)[5])
+//{}
+
+//int main()
+//{
+//	int arr[3][5] = { 0 };
+	//test(arr);//二维数组传参
+	//test1(arr);
+	//test2(arr);
+	/*test3(arr);
+	test4(arr);*/
+	/*test5(arr);
+	return 0;
+}*/
+
+//void test1(int*p)
+//{}
+//
+//int main()
+//{
+//	int a = 10;
+//	int* p1 = &a;
+//	test1(&a);//ok
+//	test1(p1);//ok
+//
+//	return 0;
+//}
+
+
+//void test(int**ptr)
+//{}
+//int main()
+//{
+//	int* ptr;
+//	int** pp = &ptr;
+//	test(&ptr);
+//	int* arr[10];//指针数组
+//	test(arr);
+//	return 0;
+//}
+
+//函数指针 - 指向函数的指针 - 存放函数地址的一个指针
+//int Add(int x, int y)
+//{
+//	int z = 0;
+//	z = x + y;
+//	return z;
+//}
+
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	//printf("%d\n", Add(a, b));
+//	//&函数名 和 函数名 都是函数的地址
+//	/*printf("%p\n", &Add);
+//	printf("%p\n", Add);*/
+//	int(*pa)(int, int) = Add;
+//	printf("%d\n", (*pa)(3, 5));//8
+//	return 0;
+//}
+
+void Print(char* str)
+{
+	printf("%s\n", str);
+}
+
+int main()
+{
+	void (*p)(char*) = Print;
+	(*p)("hello bit");
+	return 0;
+}
