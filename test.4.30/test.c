@@ -205,21 +205,56 @@
 //}
 //qsort - 可以排序任意类型的数据
 
-void test4()
-{
+//void test4()
+//{
+//
+//}
+//int main()
+//{
+//	//冒泡排序函数
+//	
+//	
+//	//test1();
+//	//test2();
+//	//test3();
+//	test4();
+//	//BubbleSort(arr, sz);
+//	
+//	return 0;
+//}
 
-}
-int main()
-{
-	//冒泡排序函数
-	
-	
-	//test1();
-	//test2();
-	//test3();
-	test4();
-	//BubbleSort(arr, sz);
-	
-	return 0;
-}
-
+//enum Sex
+//{
+//	MALE,//男
+//	FEMALE,//女
+//	SECRET//保密
+//};
+//enum Color
+//{
+//	RED,
+//	YELLOW,
+//	BLUE
+//};
+//int main()  //枚举-列举   枚举关键-enum
+//{
+//	printf("%d\n", MALE);
+//	printf("%d\n", FEMALE);
+//	printf("%d\n", SECRET);
+	//int arr[MAX] = { 0 };
+	//printf("%\n", MAX);
+//	return 0;
+//}
+//int main()
+//{
+//	char arr1 [] = "abc";
+//	char arr2 [] = {'a','b','c'};
+//	printf("%d\n", strlen(arr1));//strlen--string  length-计算字符串长度的
+//	printf("%d\n", strlen(arr2));
+//	//char arr1[] = "abc";//数组
+//	////"abc"--'a','b','c',\0        \0字符串结束标志   
+//	//char arr2[] = { 'a', 'b', 'c',0 };
+// //   printf ("%s\n",arr1);
+//	//printf ("%s\n",arr2);
+//
+//	return 0;
+//}
