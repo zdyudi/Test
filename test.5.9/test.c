@@ -211,12 +211,68 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//	char arr1[10] = "abc";
+//	char arr2[] = "hello";
+//	//strncpy(arr1, arr2, 4);
+//	strncat(arr1, arr2, 3);
+//	printf("%s\n", arr1);
+//	return 0;
+//}
+
+//int main()
+//{
+//	//字符串比较
+//	const char* p1 = "abcdef";
+//	const char* p2 = "abcqwer";
+//	int ret = strncmp(p1, p2,4);
+//	printf("%d\n", ret);
+//	return 0;
+//}
+
+char* my_strstr(const char* p1,const char* p2)
+{
+	assert(p1 != NULL);
+	assert(p2 != NULL);
+	char* s1 = (char*)p1;
+	char* s2 = (char*)p2;
+	char* cur = (char*)p1;
+	if (*p2 == '\0')
+	{
+		return (char*)p1;
+	}
+	while (*cur)
+	{
+		s1 = cur;
+		s2 = (char*)p2;
+		while (*s1 && *s2 && ( * s1 == *s2))
+		{
+			s1++;
+			s2++;
+		}
+		if (*s2 == '\0')
+		{
+			return cur;//找到
+		}
+		cur++;
+	}
+	return NULL;//找不到
+}
+
 int main()
 {
-	char arr1[10] = "abc";
-	char arr2[] = "hello";
-	//strncpy(arr1, arr2, 4);
-	strncat(arr1, arr2, 3);
-	printf("%s\n", arr1);
+	//strstr - 查找字符串
+	char* p1 = "abcdedefghi";
+	char* p2 = "def";
+	char* ret = my_strstr(p1, p2);
+	if (ret == NULL)
+	{
+		printf("子串不存在\n");
+	}
+	else
+	{
+		printf("%s\n", ret);
+	}
 	return 0;
 }
