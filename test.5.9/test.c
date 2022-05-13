@@ -231,48 +231,125 @@
 //	return 0;
 //}
 
-char* my_strstr(const char* p1,const char* p2)
-{
-	assert(p1 != NULL);
-	assert(p2 != NULL);
-	char* s1 = (char*)p1;
-	char* s2 = (char*)p2;
-	char* cur = (char*)p1;
-	if (*p2 == '\0')
-	{
-		return (char*)p1;
-	}
-	while (*cur)
-	{
-		s1 = cur;
-		s2 = (char*)p2;
-		while (*s1 && *s2 && ( * s1 == *s2))
-		{
-			s1++;
-			s2++;
-		}
-		if (*s2 == '\0')
-		{
-			return cur;//找到
-		}
-		cur++;
-	}
-	return NULL;//找不到
-}
+//char* my_strstr(const char* p1,const char* p2)
+//{
+//	assert(p1 != NULL);
+//	assert(p2 != NULL);
+//	char* s1 = (char*)p1;
+//	char* s2 = (char*)p2;
+//	char* cur = (char*)p1;
+//	if (*p2 == '\0')
+//	{
+//		return (char*)p1;
+//	}
+//	while (*cur)
+//	{
+//		s1 = cur;
+//		s2 = (char*)p2;
+//		while (*s1 && *s2 && ( * s1 == *s2))
+//		{
+//			s1++;
+//			s2++;
+//		}
+//		if (*s2 == '\0')
+//		{
+//			return cur;//找到
+//		}
+//		cur++;
+//	}
+//	return NULL;//找不到
+//}
+
+//int main()
+//{
+//	//strstr - 查找字符串
+//	char* p1 = "abcdedefghi";
+//	char* p2 = "def";
+//	char* ret = my_strstr(p1, p2);
+//	if (ret == NULL)
+//	{
+//		printf("子串不存在\n");
+//	}
+//	else
+//	{
+//		printf("%s\n", ret);
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//	/*char arr[] = "www@niuke.com";
+//	char* p = "@.";*/
+//	//点分十进制的表示方式
+//	char arr[] = "192.168.31.121";
+//	char* p = ".";
+//
+//	char buf[1024] = { 0 };
+//	strcpy(buf, arr);
+//	//切割buf中的字符串
+//	char* ret = NULL;
+//	for (ret = strtok(arr, p); ret != NULL; ret = strtok(NULL, p))
+//	{
+//		printf("%s\n", ret);
+//	}
+//
+//	/*char* ret = strtok(arr, p);
+//	printf("%s\n", ret);
+//	ret = strtok(NULL, p);
+//	printf("%s\n", ret);
+//	ret = strtok(NULL, p);
+//	printf("%s\n", ret);*/
+//	return 0;
+//}
+
+#include<errno.h>
+//int main()
+//{
+//	//错误码   错误信息
+//	//0         No error   
+//	//1         Operation not permitted
+//	//2         No such file or directory
+//	//..
+//
+//	/*char* str = strerror(errno);
+//	printf("%s\n", str);*/
+//
+//	//打开文件
+//	FILE* pf = fopen("txt", "r");
+//	if (pf == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//	}
+//	else
+//	{
+//		printf("open file success");
+//	}
+//	return 0;
+//}
+
+#include<ctype.h>
 
 int main()
 {
-	//strstr - 查找字符串
-	char* p1 = "abcdedefghi";
-	char* p2 = "def";
-	char* ret = my_strstr(p1, p2);
-	if (ret == NULL)
+	//char ch = '0';
+	////int ret = islower(ch);
+	//int ret = isdigit(ch);
+	//printf("%d\n", ret);
+
+	//char ch = tolower('Q');
+	//char ch = toupper('q');
+	//putchar(ch);
+	char arr[] = "I Am A Sudent";
+	int i = 0;
+	while (arr[i])
 	{
-		printf("子串不存在\n");
+		if (isupper(arr[i]))
+		{
+		    arr[i] = tolower(arr[i]);
+		}
+		i++;
 	}
-	else
-	{
-		printf("%s\n", ret);
-	}
+	printf("%s\n", arr);
 	return 0;
 }
