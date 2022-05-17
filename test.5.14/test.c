@@ -187,25 +187,78 @@
 //	return 0;
 //}
 
-struct S1
-{
-	char c1;
-	int a;
-	char c2;
-};
+//struct S1
+//{
+//	char c1;
+//	int a;
+//	char c2;
+//};
 
-struct S2
+//struct S2
+//{
+//	char c1;
+//	char c2;
+//	int a;
+//};
+
+//struct S3
+//{
+//	double d;
+//	char c;
+//	int i;
+//};
+
+//struct S4
+//{
+//	char c1;
+//	struct S3 s3;
+//	double d;
+//};
+
+//int main()
+//{
+	//struct S1 s1 = { 0 };
+	//printf("%zd\n",sizeof(s1) );//12
+	//struct S2 s2 = { 0 };
+	//printf("%zd\n",sizeof(s2) );//8
+//	struct S3 s3 = { 0 };
+//	printf("%zd\n", sizeof(s3));//16
+//	struct S4 s4 = { 0 };
+//	printf("%zd\n", sizeof(s4));//32
+//	return 0;
+//}
+
+//设置默认对齐数 4
+//#pragma pack(4)
+//struct s
+//{
+//	char c1;//1
+//	//7
+//	double d;//8
+//};
+//#pragma pack()
+//取消设置的默认对齐数
+
+//int main()
+//{
+//	struct s s1 = { 0 };
+//	printf("%zd", sizeof(s1));
+//	return 0;
+//}
+
+#include<stddef.h>
+struct S
 {
-	char c1;
-	char c2;
-	int a;
+	char c;
+	int i;
+	double d;
 };
 
 int main()
 {
-	struct S1 s1 = { 0 };
-	printf("%d\n",sizeof(s1) );//
-	struct S2 s2 = { 0 };
-	printf("%d\n",sizeof(s2) );//
+	//offsetof();
+	printf("%d\n", offsetof(struct S, c));//0
+	printf("%d\n", offsetof(struct S, i));//4
+	printf("%d\n", offsetof(struct S, d));//8
 	return 0;
 }
