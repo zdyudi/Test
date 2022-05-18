@@ -247,18 +247,89 @@
 //}
 
 #include<stddef.h>
+//struct S
+//{
+//	char c;
+//	int i;
+//	double d;
+//};
+
+//int main()
+//{
+//	//offsetof();
+//	printf("%d\n", offsetof(struct S, c));//0
+//	printf("%d\n", offsetof(struct S, i));//4
+//	printf("%d\n", offsetof(struct S, d));//8
+//	return 0;
+//}
+
+//struct S
+//{
+//	int a;
+//	char c;
+//	double d;
+//};
+
+//void Init(struct S* ps)
+//{
+//	ps->a = 100;
+//	ps->c = 'w';
+//	ps->d = 3.14;
+//}
+//传值
+//void Print1(struct S tmp)
+//{
+//	printf("%d %c %lf\n", tmp.a, tmp.c, tmp.d);
+//}
+//传址
+//void Print2(struct S*pt)
+//{
+//	printf("%d %c %lf\n", pt->a, pt->c, pt->d);
+//}
+
+//int main()
+//{
+//	struct S s={0};
+//	Init(&s);
+//	Print1(s);
+//	Print2(&s);
+//	/*s.a = 100;
+//	s.c = 'w';
+//	s.d = 3.14;
+//	prinf("%d\n", s.a);*/
+//	return 0;
+//}
+
+//位段
+//struct S
+//{
+//	int _a : 2;
+//	int _b : 5;
+//	int _c : 10;
+//	int _d : 30;
+//};//47bit - 6个字节*8 = 48bit
+
+//int main()
+//{
+//	struct S s;
+//	printf("%zd\n", sizeof(s));//8
+//	return 0;
+//}
+
 struct S
 {
-	char c;
-	int i;
-	double d;
+	char a : 3;
+	char b : 4;
+	char c : 5;
+	char d : 4;
 };
 
 int main()
 {
-	//offsetof();
-	printf("%d\n", offsetof(struct S, c));//0
-	printf("%d\n", offsetof(struct S, i));//4
-	printf("%d\n", offsetof(struct S, d));//8
+	struct S s={0};
+	s.a = 10;
+	s.b = 20;
+	s.c = 3;
+	s.d = 4;
 	return 0;
 }
