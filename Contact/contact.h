@@ -26,3 +26,5 @@ struct Contact
 
 //ÉùÃ÷º¯Êý
 void InitContact(struct Contact* ps);
+void AddContact(struct Contact* ps);
+void ShowContact(const struct Contact* ps);
