@@ -53,3 +53,35 @@ void ShowContact(const struct Contact* ps)
 		}
 	}
 }
+
+void DelContact(struct Contact* ps)
+{
+	char name[MAX_NAME];
+	printf("请输入要删除人的名字:>");
+	scanf("%s", name);
+	//1.查找要删除的人在什么位置
+	int i = 0;
+	for (i = 0; i < ps->sz; i++)
+	{
+		if (0 == strcmp(ps->data[i].name, name))
+		{
+			break;
+		}
+	}
+	//2.删除
+	if (i == ps->sz)
+	{
+		printf("要删除的人不存在\n");
+	}
+	else
+	{
+		//删除数据
+		int j = 0;
+		for (j = 0; j <ps->sz-1 ; j++)
+		{
+			ps->data[j] = ps->data[j + 1];
+		}
+		ps->sz--;
+		printf("删除成功\n");
+	}
+}
