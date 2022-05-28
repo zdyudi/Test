@@ -122,20 +122,84 @@
 #include<string.h>
 #include<errno.h>
 
-int main()
-{
-	//向内存申请10个整形的空间
-	int* p = (int*)malloc(10 * sizeof(int));
-	if (p == NULL)
+//int main()
+//{
+//	//向内存申请10个整形的空间
+//	int* p = (int*)malloc(10 * sizeof(int));
+//	if (p == NULL)
+//	{
+//		//打印错误原因的一个方式
+//		printf("%s\n", strerror(errno));
+//	}
+//	else
+//	{
+//		//正常使用空间
+//		int i = 0;
+//		for (i = 0; i < 10; i++)
+//		{
+//			*(p + i) = i;
+//		}
+//		for (i = 0; i < 10; i++)
+//		{
+//			printf("%d ", *(p + i));
+//		}
+//	}
+//	//当动态申请的空间不再使用
+//	//就应该还给操作系统
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+
+//int main()
+//{
+//	int* p = (int*)calloc(10,sizeof(int));
+//	if (p == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//	}
+//	else
+//	{
+//		int i = 0;
+//		for (i = 0; i < 10; i++)
+//		{
+//			printf("%d ", *(p + i));
+//		}
+//	}
+//	//释放空间
+//	//free函数是用来释放动态开辟的空间的
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+
+//int main()
+//{
+//	int* p = (int*)malloc(20);
+//	if (p == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//	}
+//	else
+//	{
+//		int i = 0;
+//		for (i = 0; i < 5; i++)
+//		{
+//			*(p + i) = i;
+//		}
+//	}
+	//使用已经开辟的20个字节空间
+	//不够 再添加
+	//realloc使用的注意事项
+	//1.如果p指向的空间之后有足够的内存空间可以追加，则直接追加，后返回p
+	//2.                   没有                    ，则会重新开辟一块空间，并把原数据拷贝回来，释放旧空间，返回地址
+	//3.用新的变量来接收
+	/*int* p2 = (int*)realloc(p, 40);
+	if (p2 != NULL)
 	{
-		//打印错误原因的一个方式
-		printf("%s\n", strerror(errno));
-	}
-	else
-	{
-		//正常使用空间
+		p = p2;
 		int i = 0;
-		for (i = 0; i < 10; i++)
+		for (i = 5; i < 10; i++)
 		{
 			*(p + i) = i;
 		}
@@ -144,9 +208,7 @@ int main()
 			printf("%d ", *(p + i));
 		}
 	}
-	//当动态申请的空间不再使用
-	//就应该还给操作系统
 	free(p);
 	p = NULL;
 	return 0;
-}
+}*/
