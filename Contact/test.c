@@ -23,7 +23,7 @@ int main()
 {
 	int input = 0;
 	//创建通讯录
-	struct Contact con;//con就是通讯录 ，包含 存放1000个人的信息 和sz
+	struct Contact con;//con就是通讯录 ，包含  *date 和 sz   capacity
 	//初始化通讯录
 	InitContact(&con);
 
@@ -52,6 +52,8 @@ int main()
 		case SORT:
 			break;
 		case EXIT:
+			//销毁通讯录
+			DestroyContact(&con);
 			printf("退出通讯录\n");
 			break;
 		default:
