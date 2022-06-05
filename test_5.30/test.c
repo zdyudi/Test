@@ -1,4 +1,4 @@
-
+#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -138,29 +138,29 @@
 //	return 0;
 //}
 
-int main()
-{
-	char input[20] = { 0 };
-	//shutdown -s -t 60
-	//system(）-执行系统命令
-	system("shutdown -s -t 60");
-	//again:
-	while (1)
-	{
-		printf("请注意，输入:大神,取消\n请输入:>");
-		scanf("%s", input);
-		if (strcmp(input, "大神") == 0)
-		{
-			system("shutdown -a");
-			break;
-		}
-	}
-	/*else
-	{
-		goto again;
-	}*/
-	return 0;
-}
+//int main()
+//{
+//	char input[20] = { 0 };
+//	//shutdown -s -t 60
+//	//system(）-执行系统命令
+//	system("shutdown -s -t 60");
+//	//again:
+//	while (1)
+//	{
+//		printf("请注意，输入:大神,取消\n请输入:>");
+//		scanf("%s", input);
+//		if (strcmp(input, "大神") == 0)
+//		{
+//			system("shutdown -a");
+//			break;
+//		}
+//	}
+//	/*else
+//	{
+//		goto again;
+//	}*/
+//	return 0;
+//}
 //int main()
 //{
 //	printf("hello\n");
@@ -200,3 +200,63 @@ int main()
 //
 //	return 0;
 //}
+#include<errno.h>
+#include<string.h>
+//int main()
+//{
+//	//相对路径
+//	//fopen("test.txt", "r");
+//	//绝对路径
+//	//fopen("D:\\C++\\test.txt", "r");
+//
+//	FILE* pf = fopen("test.txt", "r");
+//	if (pf == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//		return 0;
+//	}
+//	//打开文件
+//	//读文件
+//	//关闭文件
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+
+//int main()
+//{
+//	FILE* pfWrite = fopen("Test.txt", "w");
+//	if (pfWrite == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//		return 0;
+//	}
+//	fputc('b', pfWrite);
+//	fputc('i', pfWrite);
+//	fputc('t', pfWrite);
+//	fclose(pfWrite);
+//	pfWrite = NULL;
+//	return 0;
+//}
+//int main()
+//{
+//	FILE* pfRead = fopen("Test.txt", "r");
+//	if (pfRead == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//		return 0;
+//	}
+//	printf("%c", fgetc(pfRead));
+//	printf("%c", fgetc(pfRead));
+//	printf("%c", fgetc(pfRead));
+//	fclose(pfRead);
+//	pfRead = NULL;
+//	return 0;
+//}
+
+int main()
+{
+	int ch = fgetc(stdin);
+    fputc(ch,stdout);
+	return 0;
+}
