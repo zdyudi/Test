@@ -254,9 +254,61 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//	int ch = fgetc(stdin);
+//    fputc(ch,stdout);
+//	return 0;
+//}
+
+//int main()
+//{
+//	FILE* pf = fopen("Test.txt", "r");
+//	if (pf == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//		return 0;
+//	}
+//	/*fputc('y', pf);
+//	fputc('e', pf);
+//	fputc('s', pf);*/
+//	int ch = fgetc(pf);
+//	printf("%c", ch);
+//	ch = fgetc(pf);
+//	printf("%c", ch);
+//	ch = fgetc(pf);
+//	printf("%c", ch);
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+
+//int main()
+//{
+//	char buf[1024] = { 0 };
+//	FILE* pf = fopen("Test.txt", "w");
+//	if (pf == NULL)
+//	{
+//		return 0;
+//	}
+//	/*fgets(buf, 1024, pf);
+//	printf("%s", buf);
+//	fgets(buf, 1024, pf);
+//	printf("%s", buf);*/
+//	fputs("hello\n", pf);
+//	fputs("hehe\n", pf);
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+
 int main()
 {
-	int ch = fgetc(stdin);
-    fputc(ch,stdout);
+	char buf[1024] = { 0 };
+	//fgets(buf, 1024, stdin);//从标准输入读取
+	//fputs(buf, stdout);//输出到标准输出流
+
+	gets(buf);
+	puts(buf);
 	return 0;
 }
