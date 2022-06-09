@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#include<errno.h>
 
 //#define MAX 1000
 #define MAX_NAME 20
@@ -18,7 +19,8 @@ enum Option
 	SEARCH,
 	MODIFY,
 	SHOW,
-	SORT
+	SORT,
+	SAVE
 };
 
 struct PeoInfo
@@ -39,7 +41,7 @@ struct Contact
 };
 //struct Contact
 //{
-//	struct PeoInfo data[MAX];//存放一个信息
+//	struct PeoInfo date[MAX];//存放一个信息
 //	int sz;//记录当前已经有的元素个数
 //};
 
@@ -63,3 +65,7 @@ void SearchContact(const struct Contact* ps);
 void ModifyContact(struct Contact* ps);
 
 void DestroyContact(struct Contact* ps);
+
+void SaveContact(struct Contact* ps);
+
+void LoadContact(struct Contact* pa);
