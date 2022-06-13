@@ -158,28 +158,80 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//	FILE* pf = fopen("test.txt", "r");
+//	if (pf == NULL)
+//	{
+//		perror("hehe");
+//		return 0;
+//	}
+//	int ch = 0;
+//	while ((ch = fgetc(pf))!=EOF)
+//	{
+//		putchar(ch);
+//	}
+//	if (ferror(pf))
+//	{
+//		printf("error\n");
+//	}
+//	else if (feof(pf))
+//	{
+//		printf("end of file\n");
+//	}
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+
+//typedef struct S
+//{
+//	int a;//4
+//	char b;//1
+//	short c;//2
+//	short d;//2
+//}s;//12
+//
+//int main()
+//{
+//	printf("%d\n", sizeof(s));
+//	return 0;
+//}
+
+//假设 标准偏移量是4
+//struct A
+//{
+//	int a;//4
+//	short b;//2
+//	int c;//4
+//	char d;//1
+//};//16
+//struct B
+//{
+//	int a;//4
+//	short b;//2
+//	char c;//1
+//	int d;//4
+//};//12
+//
+//int main()
+//{
+//	printf("%d\n", sizeof(struct A));
+//	printf("%d\n", sizeof(struct B));
+//	return 0;
+//}
+
 int main()
 {
-	FILE* pf = fopen("test.txt", "r");
-	if (pf == NULL)
+	int arr[10] = { 0 };
+	int i = 0;
+	for (i = 0; i < 10; i++)
 	{
-		perror("hehe");
-		return 0;
+		arr[i] = i;
 	}
-	int ch = 0;
-	while ((ch = fgetc(pf))!=EOF)
+	for (i = 0; i < 10; i++)
 	{
-		putchar(ch);
+		printf("%d ", arr[i]);
 	}
-	if (ferror(pf))
-	{
-		printf("error\n");
-	}
-	else if (feof(pf))
-	{
-		printf("end of file\n");
-	}
-	fclose(pf);
-	pf = NULL;
 	return 0;
 }
