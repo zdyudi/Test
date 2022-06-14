@@ -221,16 +221,76 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		arr[i] = i;
+//	}
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	return 0;
+//}
+
+//int Add(int x, int y)
+//{
+//	return x + y;
+//}
+//
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int c = Add(a, b);
+//	printf("%d\n", c);
+//	return 0;
+//}
+
+//int Sub(int x,int y)
+//{
+//	return x - y;
+//}
+//
+//int Mul(int x, int y)
+//{
+//	return x * y;
+//}
+//
+//int Dub(int x, int y)
+//{
+//	return x / y;
+//}
+
+//int main()
+//{
+//	int i = 0;
+//	int arr[10] = {0};
+//	for (i = 0; i < 10; i++)
+//	{
+//		arr[i] = i;
+//	}
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	return 0;
+//}
+
 int main()
 {
-	int arr[10] = { 0 };
 	int i = 0;
-	for (i = 0; i < 10; i++)
+	int arr[5] = { 1,3,2,5,4 };
+	for (i = 0; i < 5; i++)
 	{
-		arr[i] = i;
-	}
-	for (i = 0; i < 10; i++)
-	{
+		if (arr[i] > arr[i + 1])
+		{
+			arr[i] = arr[i + 1];
+			i++;
+		}
 		printf("%d ", arr[i]);
 	}
 	return 0;
