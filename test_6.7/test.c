@@ -280,18 +280,51 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//	int i = 0;
+//	int sum = 0;
+//	int arr[5] = { 1,3,2,5,4 };
+//	for (i = 0; i < 5; i++)
+//	{
+//		if (arr[i] > arr[i + 1]&&i<4)
+//		{
+//			sum = arr[i];
+//			arr[i] = arr[i + 1];
+//			arr[i + 1] = sum;
+//		}
+//		printf("%d ", arr[i]);
+//	}
+//	return 0;
+//}
+
+#include<string.h>
+
+//int main()
+//{
+//	int ret = 0;
+//	char arr[100] = { "abcdef" };
+//	char arr2[100] = { "qaz" };
+//	//strcpy(arr2, arr);//copy
+//	ret = strcmp(arr, arr2);
+//	strcat(arr, arr2);
+//	printf("%s\n", arr);
+//	printf("%d\n", ret);
+//	return 0;
+//}
+
 int main()
 {
+	int arr[5] = {0};
 	int i = 0;
-	int arr[5] = { 1,3,2,5,4 };
 	for (i = 0; i < 5; i++)
 	{
-		if (arr[i] > arr[i + 1])
-		{
-			arr[i] = arr[i + 1];
-			i++;
-		}
-		printf("%d ", arr[i]);
+		arr[i] = i;
+		printf("%d\n", arr[i]);
+	}
+	for (i = 0; i < 5; i++)
+	{
+		scanf("%d", &arr);
 	}
 	return 0;
 }
