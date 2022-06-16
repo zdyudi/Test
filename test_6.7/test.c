@@ -313,18 +313,40 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//	int i = 0;
+//	int n = 0;
+//	scanf("%d", &i);
+//	n = i;
+//	printf("%d\n", n);
+//	return 0;
+//}
+
+//struct S
+//{
+//	char name[20];
+//	int age;
+//	char tele[12];
+//	char sex[10];
+//};
+//
+//int main()
+//{
+//	struct S s = { "zhangsan",25,"34567","nan"};
+//	printf("%s\n", s.name);
+//	printf("%d\n", s.age);
+//	printf("%s\n", s.tele); 
+//	printf("%s\n", s.sex);
+//	return 0;
+//}
+
 int main()
 {
-	int arr[5] = {0};
-	int i = 0;
-	for (i = 0; i < 5; i++)
-	{
-		arr[i] = i;
-		printf("%d\n", arr[i]);
-	}
-	for (i = 0; i < 5; i++)
-	{
-		scanf("%d", &arr);
-	}
+	int a = 0x11223344;
+	int* pa = &a;
+	*pa = 0;
+	printf("%p\n", pa);
+	printf("%d\n", a);
 	return 0;
 }
