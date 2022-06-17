@@ -341,12 +341,74 @@
 //	return 0;
 //}
 
-int main()
-{
-	int a = 0x11223344;
-	int* pa = &a;
-	*pa = 0;
-	printf("%p\n", pa);
-	printf("%d\n", a);
-	return 0;
-}
+//int main()
+//{
+//	int a = 0x11223344;
+//	int* pa = &a;
+//	*pa = 0;
+//	printf("%p\n", pa);
+//	printf("%d\n", a);
+//	return 0;
+//}
+
+//int main()
+//{
+//	/*printf("%s\n", __FILE__);
+//	printf("%d\n", __LINE__);
+//	printf("%s\n", __DATE__);
+//	printf("%s\n", __TIME__);*/
+//
+//	int i = 0;
+//	int arr[10] = { 0 };
+//	FILE* pf = fopen("test.txt", "w");
+//	for (i = 0; i < 10; i++)
+//	{
+//		arr[i] = i;
+//		fprintf(pf,"file:%s line:%d date:%s time:%s i=%d\n",
+//			__FILE__,__LINE__,__DATE__,__TIME__,i);
+//	}
+//	fclose(pf);
+//	pf = NULL;
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//
+//	return 0;
+//}
+
+//int main()
+//{
+//	double a = 5 / 2.0;//商2余1
+//	printf("a = %lf\n", a);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a = 16;
+//	int b = a >> 1;//右移操作符，移动的是二进制位
+//	printf("%d\n", b);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a = -1;
+//	//整数的二进制表示有：原码，反码，补码
+//	//存储到内存的是补码
+//	//10000000 000000000 00000001 - 原码
+//	//11111111 111111111 11111110 - 反码
+//	//11111111 111111111 11111111 - 补码
+//	int b = a >> 1;
+//	printf("%\n", b);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a = 5;
+//	int b = a << 1;
+//	printf("%d\n", b);
+//	return 0;
+//}
