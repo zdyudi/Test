@@ -34,12 +34,67 @@
 	//return 0;
 //}
 
-#define DOUBLE(X) ((X)+(X))
+//#define DOUBLE(X) ((X)+(X))
+
+//int main()
+//{
+//	int a = 5;
+//	int ret = 10 * DOUBLE(a);//10*5+5
+//	printf("%d\n", ret);
+//	return 0;
+//}
+
+//void print(int a)
+//{
+//	printf("the value of a is %d\n", a);
+//}
+//
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	//printf("the value of a is %d\n", a);
+//	print(a);
+//    print(b);
+//	return 0;
+//}
+
+//#define PRINT(X) printf("the value of "#X" is %d\n",X)
+
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	PRINT(a);
+//	PRINT(b);
+//	return 0;
+//}
+
+//#define CAT(X,Y) X##Y
+
+//int main()
+//{
+//	int Class84 = 2019;
+//	//printf("%d\n", class84);
+//	printf("%d\n", CAT(Class, 84));
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a = 10;
+//	int b = a + 1;//1  a=10
+//	int b = ++a;//2   a=11
+//	return 0;
+//}
+
+#define MAX(X,Y) ((X)>(Y)?(X):(Y))
 
 int main()
 {
-	int a = 5;
-	int ret = 10 * DOUBLE(a);//10*5+5
-	printf("%d\n", ret);
+	int a = 10;
+	int b = 11;
+	int max = MAX(a, b);
+	printf("%d\n", max);
 	return 0;
 }
