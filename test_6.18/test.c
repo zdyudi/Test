@@ -88,13 +88,58 @@
 //	return 0;
 //}
 
-#define MAX(X,Y) ((X)>(Y)?(X):(Y))
+//#define MAX(X,Y) ((X)>(Y)?(X):(Y))
+
+//int main()
+//{
+//	int a = 10;
+//	int b = 11;
+//	int max = MAX(a++, b++);
+//	printf("%d\n", max);//12
+//	printf("%d\n", a);//11
+//	printf("%d\n", b);//13
+//	return 0;
+//}
+
+//º¯Êý
+//int Max(int x, int y)
+//{
+//	return (x > y ? x : y);
+//}
+//
+//float Max2(float x, float y)
+//{
+//	return (x > y ? x : y);
+//}
+
+//ºê
+//#define MAX(X,Y) ((X)>(Y)?(X):(Y))
+//
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	float c = 3.0f;
+//	float d = 4.0f;
+//
+//	float max = Max2(c, d);
+//	printf("%f\n", max);
+//	max = MAX(c, d);
+//	printf("%f\n", max);
+//
+//	/*int max = Max(a, b);
+//	printf("%d\n", max);
+//	max = MAX(a, b);
+//	printf("%d\n", max);*/
+//	return 0;
+//}
+
+//#define TEST(x,y) printf("test\n")
+#define SIZEOF(type) sizeof(type)
 
 int main()
 {
-	int a = 10;
-	int b = 11;
-	int max = MAX(a, b);
-	printf("%d\n", max);
+	int ret = SIZEOF(int);
+	printf("%d\n", ret);
 	return 0;
 }
