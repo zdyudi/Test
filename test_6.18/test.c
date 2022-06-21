@@ -135,11 +135,62 @@
 //}
 
 //#define TEST(x,y) printf("test\n")
-#define SIZEOF(type) sizeof(type)
+//#define SIZEOF(type) sizeof(type)
+
+//int main()
+//{
+//	int ret = SIZEOF(int);
+//	printf("%d\n", ret);
+//	return 0;
+//}
+
+//#define DEBUG
+//
+//int main()
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		arr[i] = 0;
+//#ifdef DEBUG
+//		printf("%d ", arr[i]);
+//#endif
+//	}
+//	return 0;
+//}
+
+//int main()
+//{
+//#if 1==2
+//	printf("haha\n");
+//#elif 2==2
+//	printf("hehe\n");
+//#else 
+//	printf("www\n");
+//#endif
+//	return 0;
+//}
+
+// DEBUG
+
+//int main()
+//{
+//#if  defined(DEBUG)
+//#ifdef DEBUG	
+//	printf("hehe\n");
+//#endif
+
+//#if !defined DEBUG
+//#ifndef DEBUG
+//	printf("hah\n");
+//#endif
+//	return 0;
+//}
 
 int main()
 {
-	int ret = SIZEOF(int);
-	printf("%d\n", ret);
+	int ret = Add(2, 3);//  <>   "" 
+	printf("hehe\n");
 	return 0;
 }
