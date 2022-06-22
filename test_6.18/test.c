@@ -188,9 +188,71 @@
 //	return 0;
 //}
 
+//int main()
+//{
+//	int ret = Add(2, 3);//  <>   "" 
+//	printf("hehe\n");
+//	return 0;
+//}
+
+//斐波那契数列
+//1 1 2 3 5 8 13 21 34 55 ...
+
+//int count = 0;
+//int Fib(int n)
+//{
+//	if (n == 3)//测试第3个斐波那契数的计算次数
+//	{
+//		count++;
+//	}
+//	if (n <= 2)
+//		return 1;
+//	else
+//		return Fib(n - 1) + Fib(n - 2);
+//}
+
+//int Fib(int n)
+//{
+//	int a = 1;
+//	int b = 1;
+//	int c = 1;
+//	while (n>2)
+//	{
+//		c = a + b;
+//		a = b;
+//		b = c;
+//		n--;
+//	}
+//	return c;
+//}
+//
+//int main()
+//{
+//	int n = 0;
+//	int ret = 0;
+//	scanf("%d", &n);
+//	//TDD--测试驱动开发
+//	ret = Fib(n);
+//	printf("%d\n", ret);
+//	//printf("count =%d\n", count);
+//	return 0;
+//}
+
+//#include<stddef.h>
+#define OFFSETOF(struct_name,member_name) (int)&(((struct_name*)0)->member_name)
+
+struct S
+{
+	char c1;
+	int a;
+	char c2;
+};
+
 int main()
 {
-	int ret = Add(2, 3);//  <>   "" 
-	printf("hehe\n");
+	//struct S s;
+	printf("%d\n", OFFSETOF(struct S, c1));//0
+	printf("%d\n", OFFSETOF(struct S, a));//4
+	printf("%d\n", OFFSETOF(struct S, c2));//8
 	return 0;
 }
